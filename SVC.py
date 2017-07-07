@@ -5,22 +5,6 @@ from sklearn.svm import LinearSVC ,SVC
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-# import serial
-#
-# port = serial.Serial('COM12',115200)
-#
-# #print out
-# def Output():
-#     while True:
-#         #for list in range(6):
-#         out = port.readline()
-#         return out
-#
-# a =Output()
-# #print a.split()
-# #for i in range(6):
-# b=map(int, a.split(','))
-# print b
 
 df=pd.read_csv('newtest.csv')
 #df2=pd.read_csv('newtest.csv')
@@ -40,7 +24,7 @@ X_train , X_test , Y_train , Y_test = train_test_split(x,y , random_state=5)
 
 svm=SVC()
 svm.fit(x,y)
-y_pre=svm.predict([4, -10, 0, 50, 0, 0, 50, 0, 50])
+#y_pre=svm.predict([4, -10, 0, 50, 0, 0, 50, 0, 50])
 print (y_pre)
 
-#print metrics.accuracy_score(Y_test,y_pre)
+print metrics.accuracy_score(Y_test,y_pre)
